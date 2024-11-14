@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPS Survey</title>
+    <link
+      rel="icon"
+      type="image/icon"
+      href="https://focusengineering.in/wp-content/uploads/2023/03/cropped-cropped-Focus-Engg-Logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      #NPSSurveyPage {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-image: url("https://t4.ftcdn.net/jpg/07/01/79/01/360_F_701790157_IJGLphUNUbs2TiSBqosOfPtGHG1Mnqvw.jpg");
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+        color: #666;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .options {
+        margin-top: 10px;
+      }
+
+      .options input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      .stars {
+        font-size: 25px;
+        color: orange;
+      }
+
+      .stars input[type="radio"] {
+        display: none;
+      }
+
+      .stars label {
+        cursor: pointer;
+      }
+
+      .stars input:checked + label ~ label {
+        color: #dddddd;
+      }
+
+      .stars input:hover + label ~ label {
+        color: #dddddd;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      input[type="button"],
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover,
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      input[type="button"] {
+        background-color: #ccc;
+        color: #333;
+      }
+
+      input[type="button"]:hover {
+        background-color: #aaa;
+      }
+
+      .fa-star {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="NPSSurveyPage">
+      <form id="SatisfiedMyForm">
+        <h1>NPS Survey</h1>
+        <h3>Explain To Stellantis NPS Survey</h3>
+        <div class="question">
+          <label>Would you recommend us?</label>
+          <div class="options">
+            <input
+              type="radio"
+              name="Explanation_NPS_Survay"
+              value="Yes"
+              id="yes"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              name="Explanation_NPS_Survay"
+              value="May be"
+              id="maybe"
+            />
+            <label for="maybe">May be</label>
+          </div>
+        </div>
+        <div class="question">
+          <label>Ratings</label>
+          <div class="stars">
+            <input type="radio" name="Rating" id="star1" value="1" />
+            <label for="star1" class="fa fa-star"></label>
+            <input type="radio" name="Rating" id="star2" value="2" />
+            <label for="star2" class="fa fa-star"></label>
+            <input type="radio" name="Rating" id="star3" value="3" />
+            <label for="star3" class="fa fa-star"></label>
+            <input type="radio" name="Rating" id="star4" value="4" />
+            <label for="star4" class="fa fa-star"></label>
+            <input type="radio" name="Rating" id="star5" value="5" />
+            <label for="star5" class="fa fa-star"></label>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <td>
+              <a href="Home.html">
+                <input type="button" value="Back" />
+              </a>
+            </td>
+            <td>
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxG_F0nuIUleJi94Pw09XAk_GRSELpBcshm805xRpyGhqOL2EQ8fwgg5IXS3_IeHyD-Ag/exec";
+      const form = document.getElementById("SatisfiedMyForm");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const selectedChoice = document.querySelector(
+          'input[name="Explanation_NPS_Survay"]:checked'
+        );
+        const rating = document.querySelector('input[name="Rating"]:checked');
+
+        if (!selectedChoice) {
+          alert("Please select an option");
+        } else if (!rating) {
+          alert("Please rate your experience");
+        } else {
+          const choice = selectedChoice.value;
+          const ratingNumber =
+            Array.prototype.indexOf.call(
+              document.getElementsByName("Rating"),
+              rating
+            ) + 1;
+          // Convert ratedValue to a number
+          const formData = new FormData(form);
+          formData.append("Rating", ratingNumber);
+          console.log(formData); // Verify FormData object
+
+          fetch(scriptURL, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              console.log(response); // Verify response
+              if (choice === "Yes" || choice === "May be") {
+                window.location.href = "Yes_Side_SurvayEnd.html";
+              }
+            })
+            .catch((error) => console.error("Error!", error.message));
+        }
+      });
+    </script>
+  </body>
+</html>

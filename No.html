@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPS Survay - Not Satisfied.html</title>
+    <link
+      rel="icon"
+      type="image/icon"
+      href="https://focusengineering.in/wp-content/uploads/2023/03/cropped-cropped-Focus-Engg-Logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Global Styles */
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      /* Container Styles */
+
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-image: url("https://t4.ftcdn.net/jpg/07/01/79/01/360_F_701790157_IJGLphUNUbs2TiSBqosOfPtGHG1Mnqvw.jpg");
+        background-size: cover;}
+
+      /* Header Styles */
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Stars Rating Styles */
+
+      .stars {
+        background-color: white;
+        border-radius: 5px;
+        font-size: 25px;
+        color: orange;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .stars input[type="radio"] {
+        display: none;
+      }
+
+      .stars label {
+        color: #ddd;
+        font-size: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .stars label:hover {
+        color: #fcc;
+      }
+
+      .stars label:hover ~ label {
+        color: #ddd;
+      }
+
+      .stars input[type="radio"]:checked ~ label {
+        color: #fcc;
+      }
+
+      /* Form Elements Styles */
+
+      #form_elements {
+        padding: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      /* Radio Group Styles */
+
+      .radio-group {
+        margin-top: 10px;
+      }
+
+      .radio-group input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      /* Textarea Styles */
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Table Styles */
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      /* Button Group Styles */
+
+      .button-group {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .button-group input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button-group input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .button-group table tr td input[type="button"],
+      .button-group table tr td input[type="reset"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button-group table tr td input[type="button"]:hover,
+      .button-group table tr td input[type="reset"]:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Responsive Design */
+
+      @media only screen and (max-width: 768px) {
+        .container {
+          margin: 20px auto;
+          padding: 10px;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .container {
+          margin: 10px auto;
+          padding: 5px;
+        }
+        .form-group {
+          margin-bottom: 10px;
+        }
+        .button-group {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h4>Explain To Stellantis NPS Survey</h4>
+        <input type="checkbox" value="No" /> No
+      </div>
+      <div class="stars">
+        <p>Ratings</p>
+        <form id="NotSatisfiedmyform">
+          <input type="radio" name="rating" id="star1" />
+          <label for="star1" class="fa fa-star"></label>
+          <input type="radio" name="rating" id="star2" />
+          <label for="star2" class="fa fa-star"></label>
+          <input type="radio" name="rating" id="star3" />
+          <label for="star3" class="fa fa-star"></label>
+          <input type="radio" name="rating" id="star4" />
+          <label for="star4" class="fa fa-star"></label>
+          <input type="radio" name="rating" id="star5" />
+          <label for="star5" class="fa fa-star"></label>
+        </form>
+      </div>
+      <br /><br />
+      <div id="form_elements">
+        <form id="queries" method="POST">
+          <div class="form-group">
+            <label for=""
+              >RECALL CAMPAIGN (Check Recalls and RRTs Completed)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="RECALL CAMPAIGN (Check Recalls and RRTs Completed)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="RECALL CAMPAIGN (Check Recalls and RRTs Completed)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >SERVICE CHECK SHEET (Correct Check Sheet Used and Updated by
+              Technician)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="SERVICE CHECK SHEET (Correct Check Sheet Used and Updated by Technician)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="SERVICE CHECK SHEET (Correct Check Sheet Used and Updated by Technician)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >BATTERY (Check Terminals, Primary/Secondary - Refer Test Report.
+              State of Charge > 75% Status)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="BATTERY (Check Terminals, Primary/Secondary - Refer Test Report. State of Charge > 75% Status)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="BATTERY (Check Terminals, Primary/Secondary - Refer Test Report. State of Charge > 75% Status)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >COOLANT SYSTEM (Level, Leaks and Radiator, reservoir Caps
+              Conditon)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="COOLANT SYSTEM (Level, Leaks and Radiator, reservoir Caps Conditon)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="COOLANT SYSTEM (Level, Leaks and Radiator, reservoir Caps Conditon)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >OIL LEVELS AND LEAKS (Engine, Brake, Power Steering, Fuel Leak if
+              any)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="OIL LEVELS AND LEAKS (Engine, Brake, Power Steering, Fuel Leak if any)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="OIL LEVELS AND LEAKS (Engine, Brake, Power Steering, Fuel Leak if any)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for="">DRIVE BELTS (Cracks/Tension)</label>
+            <br />
+            <input
+              type="radio"
+              name="DRIVE BELTS (Cracks/Tension)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="DRIVE BELTS (Cracks/Tension)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >ENGINE HOOD HINGES, DOOR AND BOOT LOCKS (Cleaning and
+              Lubrication)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="ENGINE HOOD HINGES, DOOR AND BOOT LOCKS (Cleaning and Lubrication)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="ENGINE HOOD HINGES, DOOR AND BOOT LOCKS (Cleaning and Lubrication)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >LIGHTS / HORN (Interior, Exterior, Instrument Panel, A/C Panel,
+              Other Illumination Lights etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="LIGHTS / HORN (Interior, Exterior, Instrument Panel, A/C Panel, Other Illumination Lights etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="LIGHTS / HORN (Interior, Exterior, Instrument Panel, A/C Panel, Other Illumination Lights etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >WINDOW AND LOCKING (Central Lock and Door Window
+              Operations)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="WINDOW AND LOCKING (Central Lock and Door Window Operations)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="WINDOW AND LOCKING (Central Lock and Door Window Operations)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >WIPER AND WIND SCREEN WASHERS (Check Front Rear Washers and
+              Wipers Condition)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="WIPER AND WIND SCREEN WASHERS (Check Front Rear Washers and Wipers Condition)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="WIPER AND WIND SCREEN WASHERS (Check Front Rear Washers and Wipers Condition)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for="">RADIO AND SPEAKERS (Check the operation)</label>
+            <br />
+            <input
+              type="radio"
+              name="RADIO AND SPEAKERS (Check the operation)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="RADIO AND SPEAKERS (Check the operation)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >NEXT SERVICE REMINDER (Next Service Reminder Duration and
+              Mileage)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="NEXT SERVICE REMINDER (Next Service Reminder Duration and Mileage)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="NEXT SERVICE REMINDER (Next Service Reminder Duration and Mileage)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >HAND BRAKE OR FOOT BRAKE FUNCTION (Number of Notches and
+              Efficiency)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="HAND BRAKE OR FOOT BRAKE FUNCTION (Number of Notches and Efficiency)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="HAND BRAKE OR FOOT BRAKE FUNCTION (Number of Notches and Efficiency)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for="">SEAT BELTS (Condition and Operation)</label>
+            <br />
+            <input
+              type="radio"
+              name="SEAT BELTS (Condition and Operation)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="SEAT BELTS (Condition and Operation)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >REMOTE KEY (Engine Start, Door Lock / Unlock and Boot
+              Operation)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="REMOTE KEY (Engine Start, Door Lock / Unlock and Boot Operation)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="REMOTE KEY (Engine Start, Door Lock / Unlock and Boot Operation)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >TIRE AND WHEELS (Tire Pressure, Tire Condition, Noise, Vibration,
+              Wheel Nut Torque, Pulling, Shimmy, Shaky and Wandering
+              etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="TIRE AND WHEELS (Tire Pressure, Tire Condition, Noise, Vibration, Wheel Nut Torque, Pulling, Shimmy, Shaky and Wandering etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="TIRE AND WHEELS (Tire Pressure, Tire Condition, Noise, Vibration, Wheel Nut Torque, Pulling, Shimmy, Shaky and Wandering etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >Engine (Noise at Idle, Vibration, Misfiring, Hard Starting,
+              Hesitation, Surge, Stumble, Exhaust Noise, Over Heat etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="Engine (Noise at Idle, Vibration, Misfiring, Hard Starting, Hesitation, Surge, Stumble, Exhaust Noise, Over Heat etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="Engine (Noise at Idle, Vibration, Misfiring, Hard Starting, Hesitation, Surge, Stumble, Exhaust Noise, Over Heat etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >POWERTRAIN (Gear Noise, Slipping, Shift Shock, Delay Shift,
+              Slipping, 4X4 Operation, Diff Operation etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="POWERTRAIN (Gear Noise, Slipping, Shift Shock, Delay Shift, Slipping, 4X4 Operation, Diff Operation etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="POWERTRAIN (Gear Noise, Slipping, Shift Shock, Delay Shift, Slipping, 4X4 Operation, Diff Operation etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >BRAKE SYSTEM AND BOOSTER OPERATION (Ref Brake Measurement in the
+              Check Sheet, Noise, Judder, Performance, Hard, Drifting
+              etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="BRAKE SYSTEM AND BOOSTER OPERATION (Ref Brake Measurement in the Check Sheet, Noise, Judder, Performance, Hard, Drifting etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="BRAKE SYSTEM AND BOOSTER OPERATION (Ref Brake Measurement in the Check Sheet, Noise, Judder, Performance, Hard, Drifting etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >UNDER CARRIAGE / SUSPENTION / DRIVE SHAFT / STEERING (Oil Leaks,
+              Noise (road Condition), Vibration, Pulling, Bushes Crack, Joint
+              Leak, Steering Not in Center, Etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="UNDER CARRIAGE / SUSPENTION / DRIVE SHAFT / STEERING (Oil Leaks, Noise (road Condition), Vibration, Pulling, Bushes Crack, Joint Leak, Steering Not in Center, Etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="UNDER CARRIAGE / SUSPENTION / DRIVE SHAFT / STEERING (Oil Leaks, Noise (road Condition), Vibration, Pulling, Bushes Crack, Joint Leak, Steering Not in Center, Etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >AIR CONDITIONING (Blower Motor, Mode Controls, Performance
+              (Cooling), Noise, Odour, etc.,)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="AIR CONDITIONING (Blower Motor, Mode Controls, Performance (Cooling), Noise, Odour, etc.,)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="AIR CONDITIONING (Blower Motor, Mode Controls, Performance (Cooling), Noise, Odour, etc.,)"
+              value="No"
+            />
+            No
+          </div>
+
+          <div class="form-group">
+            <label for=""
+              >BODY AND TRIM (Wind Noise, Airleak, Window and Door Rubber
+              Condition)</label
+            >
+            <br />
+            <input
+              type="radio"
+              name="BODY AND TRIM (Wind Noise, Airleak, Window and Door Rubber Condition)"
+              value="Yes"
+            />
+            Yes
+            <input
+              type="radio"
+              name="BODY AND TRIM (Wind Noise, Airleak, Window and Door Rubber Condition)"
+              value="No"
+            />
+            No
+          </div>
+          <div class="button-group">
+            <table>
+              <tr>
+                <td>
+                  <a href="Home.html">
+                    <input type="button" value="Back" />
+                  </a>
+                </td>
+                <td>
+                  <a href="No_Side_SurvayEnd.html">
+                    <input type="Submit" value="Submit" />
+                  </a>
+                </td>
+
+                <td>
+                  <input type="reset" value="Reset" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      // Get the form element
+      const form = document.getElementById("queries");
+
+      // Add event listener to form submission
+      form.addEventListener("submit", (e) => {
+        // Prevent default form submission behavior
+        e.preventDefault();
+
+        // Check if all answers are selected and star rating is given
+        if (allAnswersSelected() && starRatingSelected()) {
+          // Display success alert
+          alert("Your response has been successfully submitted!");
+
+          // Navigate to Yes.html
+          window.location.href = "No_Side_SurvayEnd.html";
+        } else {
+          // Display alert if not all answers are selected or star rating is not given
+          alert("Please select all answers and give a star rating");
+        }
+      });
+
+      // Function to check if all answers are selected
+      function allAnswersSelected() {
+        const radioButtons = form.querySelectorAll('input[type="radio"]');
+        let allSelected = true;
+
+        radioButtons.forEach((button) => {
+          if (!button.checked) {
+            const name = button.name;
+            const group = form.querySelectorAll(`input[name="${name}"]`);
+            if (Array.from(group).every((btn) => btn.checked)) {
+              allSelected = false;
+            }
+          }
+        });
+
+        return allSelected;
+      }
+
+      // Function to check if star rating is selected
+      function starRatingSelected() {
+        const rating = document.querySelectorAll(
+          '#NotSatisfiedmyform input[type="radio"]'
+        );
+        let selected = false;
+
+        rating.forEach((radio) => {
+          if (radio.checked) {
+            selected = true;
+          }
+        });
+
+        return selected;
+      }
+    </script>
+  </body>
+</html>
